@@ -1,0 +1,45 @@
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    margin-left: 25%;
+}
+
+ul li label{
+    display: block;
+    width: 70px;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+#titulo{
+    width: 400px;
+}
+
+.botones{
+    text-align: end;
+    width: 409px;
+}
+
+.botones button{
+    text-align: end;
+    border: 1px solid black;
+    background: white;
+    padding: 10px 20px;
+    cursor:pointer;
+}
+
+#limpiar{
+    margin-right: 20px;
+}
+
+#enviar{
+    padding: 10px 30px;
+}
+
+.error{
+    color: red;
+    font-size: 15px;
+    margin: 5px;
+}

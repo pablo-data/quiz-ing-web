@@ -1,0 +1,43 @@
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    width: 100%;
+}
+
+.estados{
+    display: flex;
+    width: 60%;
+    padding-top: 20px;
+}
+
+#iniciada, #proceso, #terminado{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 25%;
+    border: 1px solid black;
+}
+
+#iniciada{
+    background: red;
+}
+
+#proceso{
+    background: yellow;
+}
+
+#terminado{
+    background: green;
+}
+
+
+.estado{
+    margin: 0px 10px;
+}

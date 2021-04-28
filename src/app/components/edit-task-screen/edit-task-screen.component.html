@@ -1,0 +1,33 @@
+<form [formGroup]="formulario" (ngSubmit)="validar()" novalidate>
+    <ul>
+        <li>
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" formControlName="titulo" required>
+
+            <div class="error" *ngIf="formulario.get('titulo')?.errors?.required">
+                El titulo es obligatorio
+            </div>
+        </li>
+        <li>
+            <label for="estado">Estado</label>
+            <select formControlName="estado" required>
+                <option value="" disabled selected>Select</option>
+                <option *ngFor="let estado of estados" [ngValue]="estado">
+                    {{ estado.name }}
+                </option>
+            </select>
+
+            <div class="error" *ngIf="formulario.get('estado')?.errors?.required">
+                Elija un estado
+            </div>
+        </li>
+        <li>
+            <div class="botones">
+                <button type="submit" id="enviar" [disabled]="!formulario.valid"> Actualizar</button>
+            </div>
+        </li>
+
+    </ul>
+</form>
+
+

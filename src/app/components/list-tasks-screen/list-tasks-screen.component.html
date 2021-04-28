@@ -1,0 +1,39 @@
+<main>
+
+    <div class="wrapper">
+        <div class="terminado-caja">
+            <div class="tareas" *ngFor="let tarea of tareas">
+                <div *ngIf="tarea.estado === 'Terminado'" class="terminado">
+                    <h5>{{tarea.titulo}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="proceso-caja">
+            <div class="tareas" *ngFor="let tarea of tareas">
+                <div *ngIf="tarea.estado === 'En proceso'" class="proceso">
+                    <h5>{{tarea.titulo}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="iniciado-caja">
+            <div class="tareas" *ngFor="let tarea of tareas">
+                <div *ngIf="tarea.estado === 'Iniciada'" class="iniciado" (click)="editarTask(tarea)"> 
+                    <h5>{{tarea.titulo}}<button (click)="deleteTask(tarea)">X</button></h5>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<div class="mensaje">
+    <p>Al dar clic sobre cada</p>
+    <p>tarea permitirá editar</p>
+</div>
+
+<footer>
+<button class="adicionar" id="adicionar" routerLink="/home">+</button>
+<label for="adicionar">Adicionar</label>
+</footer>
